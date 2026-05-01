@@ -17,11 +17,11 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Authenticate succefuly')
+                    return HttpResponse('Authenticate successfully')
                 else:
                     return HttpResponse('Disable account')
             else:
                 return HttpResponse('Ivalid login')
-        else:
-            form = LoginForm()
-        return render(request, 'account/login.html', {'form': form})
+    else:
+        form = LoginForm()
+    return render(request, 'account/login.html', {'form': form})
