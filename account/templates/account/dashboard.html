@@ -2,5 +2,5 @@
 {% block title %}Dashboard{% endblock  %}
 {% block content %}
     <h1>Dashboard</h1>
-    <p>Welcome To Your Dashboard.</p>
+    <p>Welcome To Your Dashboard. You can <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a>.</p>
 {% endblock  %}
